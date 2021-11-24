@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+* {
+     box-sizing: border-box;
+}
+body {
+     background-color: #ece9e6;
+     background: linear-gradient(to right,#ffffff,#ece9e6);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Poppins',sans-serif;
+     margin: 0px;
+     min-height: 100vh;
+}
+img {
+     max-width: 100%;
+}
+.mobile-container {
+     background-color: #fff;
+     box-shadow: 0px 0px 10px 2px #3333331a;
+     border-radius: 3px;
+     overflow: hidden;
+     width: 400px;
+}
+header {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 1rem;
+}
+header #search-term {
+     background-color: #eee;
+     border: none;
+     border-radius: 3px;
+     font-family: inherit;
+     padding: 0.5rem 1rem;
+     text-transform: capitalize;
+}
+header #search {
+     background-color: transparent;
+     color: rgb(138,129,141);
+     border: none;
+     font-size: 1.5rem;
+     margin-left: 10px;
+     text-transform: capitalize;
+}
+.favorite-container {
+     background-color: rgb(243,225,255);
+     padding: 0.25rem 1rem;
+     text-align: center;
+     text-transform: capitalize;
+}
+.favorite-meals {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     list-style-type: none;
+     padding: 0rem;
+}
+.favorite-meals li {
+     cursor: pointer;
+     position: relative;
+     margin: 5px;
+     width: 75px;
+     text-transform: capitalize;
+}
+.favorite-meals li .clear {
+     background-color: transparent;
+     border: none;
+     cursor: pointer;
+     opacity: 0;
+     position: absolute;
+     top: -0.5rem;
+     right: -0.5rem;
+     font-size: 1.2rem;
+}
+.favorite-meals li:hover .clear {
+     opacity: 1;
+}
+.favorite-meals li img {
+     border: 2px solid #ffffff;
+     border-radius: 50%;
+     box-shadow: 0px 0px 10px 2px #3333331a;
+     object-fit: cover;
+     width: 70px;
+     height: 70px;
+}
+.favorite-meals li span {
+     display: inline-block;
+     font-size: 0.9rem;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     text-transform: capitalize;
+     width: 75px;
+}
+.meal {
+     border-radius: 3px;
+     box-shadow: 0px 0px 10px 2px #3333331a;
+     cursor: pointer;
+     margin: 1.5rem;
+     overflow: hidden;
+}
+.meal-header {
+     position: relative;
+}
+.meal-header .random {
+     position: absolute;
+     top: 1rem;
+     background-color: #fff;
+     padding: 0.25rem 1rem;
+     border-top-right-radius: 3px;
+     border-bottom-right-radius: 3px;
+}
+.meal-header img {
+     object-fit: cover;
+     width: 100%;
+     height: 250px;
+}
+.meal-body {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 1rem;
+}
+.meal-body h4 {
+     margin: 0rem;
+     text-transform: capitalize;
+}
+.meal-body .favorite-button {
+     border: none;
+     background-color: transparent;
+     color: rgb(197,188,188);
+     cursor: pointer;
+     font-size: 1.2rem;
+     text-transform: capitalize;
+}
+.meal-body .favorite-button.active {
+     color: rebeccapurple;
+}
+.popup-container {
+     background-color: rgba(0,0,0,0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     right: 0px;
+     bottom: 0px;
+}
+.popup-container.hidden {
+     opacity: 0;
+     pointer-events: none;
+}
+.popup-container .popup {
+     background-color: #fff;
+     border-radius: 5px;
+     padding: 0rem 2rem;
+     position: relative;
+     overflow: auto;
+     width: 100%;
+     max-width: 600px;
+     max-height: 100vh;
+}
+.popup-container .popup .close-popup {
+     background-color: transparent;
+     border: none;
+     cursor: pointer;
+     font-size: 1.5rem;
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+}
+.popup-container .popup .meal-info h1 {
+     text-align: center;
+     text-transform: capitalize;
+}
